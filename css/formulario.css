@@ -1,0 +1,113 @@
+:root{
+    --blanco : #F7F0F0;
+    --morado : #D1B4FD;
+    --celeste : #4CC5E0;
+    --rojo : #6A0210;
+}
+
+body {
+    background-color: var(--blanco);
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+
+nav {
+    background-color: var(--blanco);
+    color: var(--texto);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding-left: 50px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+nav li:last-child {
+    margin-right: 0;
+}
+  
+nav a {
+    display: block;
+    padding: 10px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+  
+nav a:hover {
+    color: var(--morado);
+}
+
+#title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: 0vh;
+    margin-bottom: 20vh;
+    padding-top: 5%;
+}
+
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    background-color: var(--morado);
+    padding: 2% 4% !important;
+    border-radius: 15px;
+    max-width: 90%;
+}
+
+#color {
+    height: 55%;
+}
+
+#generos {
+    background-color: #fff;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+}
+
+#btn {
+    text-align: center;
+}
+
+textarea{
+    resize: none !important;
+}
+
+.enviar {
+    background-color: var(--celeste);
+    border-radius: 10px;
+    width: 30%;
+    border: none;
+    padding: 1%;
+    transition: background-color 450ms ease-in, color 300ms 150ms;
+}
+
+.enviar:hover{
+    background-color: var(--rojo);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    body, input, select{
+        font-size: small !important;
+    }
+}
+
+.error{
+    color: var(--rojo);
+    font-style: italic;
+    font-size: small;
+}

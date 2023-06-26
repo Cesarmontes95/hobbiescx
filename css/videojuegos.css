@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+/* --------------------------------------------------------
+
+    // VARIABLES CSS
+
+-----------------------------------------------------------*/
+
+:root {
+  /* COLOR TRANSPARENTE DEL HEADER - SE PUEDE QUITAR O CAMBIAR POR UN COLOR NORMAL */
+ 
+
+    
+
+    --main-color: #F7F0F0;
+    --color-purple: #dfccfb;
+    --color-sky: #4cc5e0;
+    --color-ocre: #6a0210;
+    --text-color: #000;
+    
+  /* COLOR CON GRADIENTES DEL TITULO DEL HEADER */
+  --color-titulo-header: -webkit-linear-gradient(
+    180deg,
+    #670709 0%,
+    #b100fd 100%
+  );
+
+  /* COLOR DEL BOTON DE MENU */
+  --color-bg-btn: #000;
+
+  /* CELESTE - COLOR DE BOTONES Y BACKGROUND DEL MENU DE NAVEGACION Y LINEA DE SEPARACION*/
+  --btn-bg_Nav-line-S_media: #6bc2f7;
+
+  /* AZUL - COLOR AL HACER HOVER SOBRE LOS BOTONES*/
+  --btn-hover: #2267e7;
+
+  /* COLOR LETRA DE LOS BOTONES */
+  --color-letra-btn: #000;
+
+  /* GRIS OSCURO - COLOR BACKGROUND DEL FOOTER */
+  --bg-footer: #9358e7;
+
+  /* EFECTO TIPO SCROLL HACE QUE EN AUTO SCROLL SEA BONITO */
+  scroll-behavior: smooth;
+}
+
+/*-------------------------------------------
+
+    //ESTILOS GENERALES 
+    
+---------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+body {
+  font-size: 16px;
+  
+  background-repeat: no-repeat;
+}
+
+.boton {
+  background: var(--btn-bg_Nav-line-S_media);
+  color: #000000;
+  text-decoration: none;
+  border-radius: 2.5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.boton:hover {
+  background: var(--btn-hover);
+  color: var(--color-letra-btn);
+  transition: 0.3s;
+  border: none;
+}
+
+/*-------------------------------------------
+
+    //ESTILOS DE CABECERA 
+    
+---------------------------------------------*/
+
+.header {
+  width: 100%;
+  height: 700px;
+  background-image: url(https://pbs.twimg.com/media/FGlTQAHXMAUSBJh?format=jpg&name=large);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+.menu {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*-------------------------------------------
+
+    //ESTILOS DE MENU 
+    
+---------------------------------------------*/
+
+.menu__img {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: var(--color-bg-btn);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu__navegacion {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 100%;
+  background: var(--btn-bg_Nav-line-S_media);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(110%);
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu__link {
+  display: flex;
+  padding: 15px 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+  transition: 0.5s ease-in-out;
+}
+
+.spread {
+  transform: translate(0);
+}
+
+/*-------------------------------------------
+    
+    //TITULO Y SUBTITULO DEL HEADER
+
+---------------------------------------------*/
+
+.header__textos {
+  margin: 150px 0;
+  text-align: center;
+  color: #000;
+}
+
+.header__titulo {
+  background: var(--color-titulo-header);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  margin-bottom: 5px;
+}
+
+.header__linea {
+  width: 500px;
+  margin: auto;
+  height: 3px;
+  background: var(--btn-bg-Nav-line);
+  margin-bottom: 20px;
+}
+
+.header__subtitulo {
+  font-size: 30px;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.boton--bienvenido {
+  line-height: 2;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.boton--bienvenido:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*---------------------------------------------------
+
+    //ESTILOS SOBRE LAS HISTORIAS Y ACERCA-DE 
+
+-----------------------------------------------------*/
+
+.acerca {
+  background: #f0f3f5;
+  padding: 95px 0;
+  text-align: center;
+}
+
+.acerca__titulo {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.acerca__subtitulo {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+    color: #999999;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.seccion {
+  padding: 30px 0;
+}
+
+.historias__contenedor {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.historias__individual {
+  width: 33%;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.historias__titulo {
+  margin: 10px 0;
+}
+
+.historias__img {
+  width: 150px;
+}
+
+.boton--mas {
+  line-height: 1;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/*------------------------------------------------
+    
+    //ESTILOS DEL FOOTER O PIE DE PAGINA 
+
+--------------------------------------------------*/
+
+footer {
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5%;
+    background-color: var(--color-purple);
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+
+/*--------------------------------------------------
+
+    //ESTILOS DE PAGINA WEB RESPONSIVE 
+    
+----------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+
+  .light__agregar {
+    width: 90%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header__titulo {
+    font-size: 50px;
+    transition: 0.5s ease-in-out;
+  }
+  .menu__navegacion {
+    width: 65vw;
+  }
+  .menu__img {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .light__agregar {
+    width: 90%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.5s ease-in-out;
+  }
+  .header__textos {
+    margin: 100px 0;
+  }
+  .header__subtitulo {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .header__titulo {
+    font-size: 60px;
+  }
+  .menu__navegacion {
+    width: 65vw;
+  }
+  .menu__img {
+    top: 20px;
+    right: 20px;
+  }
+  .historias__contenedor {
+    flex-direction: column;
+  }
+  .historias__individual {
+    width: 90%;
+    margin: auto;
+  }
+  .portafolio__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .portafolio__img {
+    width: 48%;
+  }
+ 
+}
+
+@media screen and (max-width: 446px) {
+  .light__agregar {
+    width: 95%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  .historias__contenedor {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .historias__individual {
+    width: 90%;
+    margin: auto;
+  }
+  .social-media__icon {
+    margin-left: 10px;
+  }
+  #social-media__i {
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .acerca__subtitulo {
+    font-size: 16px;
+  }
+  .historias__individual {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .historias__parrafo {
+    font-weight: 900;
+  }
+  .portafolio__img {
+    width: 80%;
+    transition: 0.5s ease-in-out;
+  }
+  .light__agregar {
+    width: 95%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  .footer {
+    height: 745px;
+  }
+  .social-media__icon {
+    margin-left: 10px;
+  }
+  #social-media__i {
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .contenedor-iconos {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .historias__individual {
+    width: 90%;
+    margin: auto;
+  }
+  .social-media__icon {
+    margin-left: 10px;
+  }
+  #social-media__i {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+/* ------------------------------------------------------ 
+
+    // ESTILOS CORRESPONDIENTES A GALERIA DEL CONTENIDO MAIN
+       Y ESTILOS DEL EFECTO LIGHT-BOX
+
+---------------------------------------------------------*/
+
+.portafolio {
+  background: #f0f3f5;
+  padding: 60px 0;
+}
+
+.portafolio__textos {
+  text-align: center;
+}
+
+.portafolio__titulo {
+    text-align: center;
+  font-weight: 900;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.portafolio__parrafo {
+  font-weight: normal;
+  color: #999999;
+  margin-bottom: 60px;
+}
+
+.portafolio__galeria {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* width: 90%;
+    margin: 0 auto; */
+}
+
+.portafolio__img {
+  border-radius: 1.5px;
+  object-fit: cover;
+  width: 28%;
+  display: block;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.portafolio__img:hover {
+  transform: scale(0.9);
+}
+
+.portafolio__mas {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.boton--galeria {
+  padding: 15px 15px;
+  text-align: center;
+}
+
+.boton--galeria:hover {
+  background: #2267e7;
+  transition:0.3s;
+}
+
+.frame {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.boton--links {
+    margin-top: 30px ;
+    padding: 15px 15px;
+    text-align: center;
+    margin-left: 40%;
+}
+
+/*-------------------------------------------------
+
+    //ESTILOS SOBRE EL EFECTO LIGHTBOX 
+    
+---------------------------------------------------*/
+
+.light {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(100%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.light__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.light__agregar {
+  object-fit: cover;
+  width: 60%;
+  border-radius: 2.5px;
+  transform: scale(0);
+  transition: transform 0.3s 0.2s;
+}
+
+.show {
+  transform: translate(0);
+}
+
+.showImagen {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 535px) {
+  .portafolio__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .portafolio__img {
+    width: 48%;
+  }
+  .light__agregar {
+    width: 95%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .light__agregar {
+    width: 95%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}

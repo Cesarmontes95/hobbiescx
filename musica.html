@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/musica.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>Música - HobbiesCX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="js/mplayer.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="#title">Inicio</a></li>
+            <li><a href="#info">De qué trata</a></li>
+            <li><a href="#tipos">Tipos de hobbies</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div id="title">
+            <div class="tt">
+                <h1>MÚSICA</h1>
+                <p>Por música se entiende "el arte de organizar un conjunto de sonidos y silencios de una manera lógica y sensible, conforme a los principios de la armonía, la melodía y el ritmo"</p>
+            </div>
+            <div class="player">
+                <div class="wrapper">
+
+                    <div class="details">
+                        <div class="vinil play"></div>
+                        <div class="song-name">Canción</div>
+                        <div class="song-artist">Artista</div>
+                    </div>
+
+                    <div class="song-slider">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                        <div class="total-duration">00:00</div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="prev-track" onclick="prevSong()">
+                            <i class="fa fa-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseSong()">
+                            <i class="fa fa-play fa-3x"></i>
+                        </div>
+                        <div class="next-track" onclick="nextSong()">
+                            <i class="fa fa-forward fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info" class="container">
+            <h2>¿QUÉ ES?</h2>
+            <p>
+                Los principios acerca de la música  han cambiado a lo largo del tiempo, lo que ha permitido diversas manifestaciones y exploraciones artísticas, que tienen en común el deseo de conmover o producir un efecto estético en quien escucha.
+            </p>
+            <p>
+                Cuando hablamos de hobbies relacionados a la música encontramos desde la afición a escuchar o crear música, y hasta bailar. La música abre espacio a que las personas desarrollen su creatividad. 
+            </p>
+        </div>
+
+        <div id="tipos" class="container">
+            <h2>TIPOS DE HOBBIES</h2> 
+            <div class="cards">
+                <div class="card">
+                    <div class="card_inner">
+                        <div class="card_face card_face_front">
+                            <img src="img/catlisteningtomusic.jpeg" alt="gato escuchando música">
+                            <div id="click">Haz click</div>
+                        </div>
+                        <div class="card_face card_face_back">
+                            <div class="card_content">
+                                <div class="card_header">
+                                    <h3>Escuchar música</h3>
+                                </div>
+                                <div class="card_body">
+                                    <p>La afición a escuchar música se caracteriza por ser un interés exclusivo a escucharla, es decir no compartiendo la audición de la música con otras actividades. Las personas con este hobby suelen presentar interés por algún género musical específico, aunque esto no es siempre el caso puesto que puede que disfruten de diversos géneros.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_inner">
+                        <div class="card_face card_face_front">
+                            <img src="img/playinginstrument.jpeg" alt="gato tocando un instrumento">
+                            <div id="click">Haz click</div>
+
+                        </div>
+                        <div class="card_face card_face_back">
+                            <div class="card_content">
+                                <div class="card_header">
+                                    <h3>Tocar un instrumento</h3>
+                                </div>
+                                <div class="card_body">
+                                    <p>Un hobby muy popular es el de tocar instrumentos musicales, existen diversos instrumentos musicales por lo que las personas tienen una gran variedad de opciones para aprender. Una persona con esta afición puede que toque solo un instrumento o múltiples instrumentos musicales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_inner">
+                        <div class="card_face card_face_front">
+                            <img src="img/producer.jpeg" alt="gato produciendo música">
+                            <div id="click">Haz click</div>
+
+                        </div>
+                        <div class="card_face card_face_back">
+                            <div class="card_content">
+                                <div class="card_header">
+                                    <h3>Producir música</h3>
+                                </div>
+                                <div class="card_body">
+                                    <p>La producción de música  se puede dar en un nivel aficionado y se caracteriza por la edición musical ya sea desde cero o tomando muestras de sonido de otras personas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card_inner">
+                        <div class="card_face card_face_front">
+                            <img src="img/singing.jpeg" alt="gato cantando">
+                            <div id="click">Haz click</div>
+
+                        </div>
+                        <div class="card_face card_face_back">
+                            <div class="card_content">
+                                <div class="card_header">
+                                    <h3>Cantar</h3>
+                                </div>
+                                <div class="card_body">
+                                    <p>Cantar consiste en emitir sonidos de forma controlada, siguiendo una composición musical, esto es posible de realizar con acompañamiento instrumental o sin acompañamiento, como en el caso del canto a capela.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_inner">
+                        <div class="card_face card_face_front">
+                            <img src="img/dancing.jpeg" alt="gato bailando">
+                            <div id="click">Haz click</div>
+                        </div>
+                        <div class="card_face card_face_back">
+                            <div class="card_content">
+                                <div class="card_header">
+                                    <h3>Bailar</h3>
+                                </div>
+                                <div class="card_body">
+                                    <p>El baile es un hobby muy popular, el cual se puede describir como el movimiento del cuerpo acompañado de música, esto puede ser por entretenimiento, o por fines artísticos, y puede ser baile libre o coreografiado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div id="recursos" class="container">
+            <h2>RECURSOS EN LÍNEA</h2> 
+            <div id="links">
+                
+                <a href="https://guitarrec.com/como-producir-musica/" target="_blank"><i class="fa fa-music"></i>Introducción a la producción músical</a>
+                <a href="https://www.espaicoriveu.com/10-increibles-beneficios-de-cantar/" target="_blank"><i class="fa fa-microphone-alt"></i>Aprende sobre los beneficios de cantar</a>
+                <a href="https://www.thomann.de/blog/es/musica-hobby-la-felicidad/" target="_blank"><i class="fa fa-book-reader"></i>Lee más información sobre la música</a>
+            </div>
+        </div>
+
+    </div>
+    <footer>Derechos Reservados &#169; HobbiesCX - 2023 </footer>
+    <script src="js/cardflip.js"></script>
+</body>
+</html>

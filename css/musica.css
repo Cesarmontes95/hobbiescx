@@ -1,0 +1,391 @@
+:root{
+    --fondo : #FFFDFA;
+    --morado : #D1B4FD;
+    --celeste : #4CC5E0;
+    --rojo : #6A0210;
+    --texto : #000;
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Montserrat', sans-serif !important; 
+    color: var(--texto);
+}
+
+nav {
+    background-color: var(--fondo);
+    color: var(--texto);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding-left: 50px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+nav li:last-child {
+    margin-right: 0;
+}
+  
+nav a {
+    display: block;
+    padding: 10px;
+    color: var(--texto);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+  
+nav a:hover {
+    color: var(--morado);
+}
+
+#title{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: 0vh;
+    margin-bottom: 20vh;
+    padding-top: 5%;
+}
+
+@media (max-width: 800px){
+    #title{
+        grid-template-columns: 1fr;
+        top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    .tt{
+        padding-top: 0px;
+        position: relative;
+        top: -13vh;
+    }
+    .player{
+        position: relative;
+        top: -25vh;
+    }
+    .wrapper{
+        padding: 1%;
+        height: 63vh;
+    }
+    .vinil{
+        height: 25vh;
+        width: 25vh;
+    }
+}
+.tt{
+    text-align: center;
+    width: 85%;
+    padding-top: 25vh;
+    margin-left: 5vw;
+}
+h1{
+    font-weight: 900 !important;
+    font-size: 8vw !important;
+    background: linear-gradient(90deg, var(--morado) 40%, var(--celeste) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: letras 3s ease-in-out infinite;
+}
+
+@keyframes letras{
+    0%{
+        letter-spacing: 10px;
+    }
+    50%{
+        letter-spacing: 0px;
+    }
+    100%{
+        letter-spacing: 10px;
+    }
+}
+
+.tt p{
+    font-size: large;
+}
+
+.player{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+.wrapper{
+    background-color: #ffffff;
+    border-radius: 9px;
+    padding: 3%;
+    opacity: .8;
+    box-shadow: 1px 1px 25px #000;
+}
+
+.details{
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.vinil{
+    margin: 25px;
+    height: 30vh;
+    width: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/vinylcat.png);
+    border-radius: 50%;
+    box-shadow: 0px 6px 5px #ccc;
+    animation: rotate 8s infinite linear;
+    animation-play-state: paused;
+}
+
+.rotate{
+    animation-play-state: running;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+.song-name{
+    font-weight: 700;
+    font-size: small;
+    color: var(--celeste);
+}
+
+.song-artist{
+    font-size: small;
+    color: var(--celeste);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.playpause-track, .prev-track, .next-track{
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover{
+    opacity: 1;
+}
+
+.song-slider{
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: var(--morado);
+    opacity: 0.7;
+    transition: opacity .2s;
+    -webkit-transition: .2s;
+    cursor: pointer;
+}
+
+.seek_slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--morado);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.seek_slider:hover {
+    opacity: 1;
+}
+
+.current-time, .total-duration{
+    padding: 5px;
+    font-size: .6rem;
+}
+
+i {
+    cursor: pointer;
+    color: var(--texto);
+}
+
+#tipos, #info, #recursos{
+    padding-top: 10vh;
+}
+
+h2{
+    font-size: large !important;
+    font-weight: 700 !important;
+    color: var(--celeste) !important;
+    text-align: center;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    margin: 100px auto 0;
+    width: 330px;
+    height: 380px;
+    perspective: 1000px;
+    border: none !important;
+}
+
+.card_inner{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+}
+
+.card_inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card_face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 1px 20px var(--texto);
+}
+
+.card_face_front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_face_front img{
+    height: 100%;
+}
+
+#click{
+    position: absolute;
+    color: white;
+    top: 10;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.card_face_front:hover #click{
+    opacity: 1;
+}
+
+.card_face_back{
+    background-color: var(--fondo);
+    transform: rotateY(180deg);
+}
+
+.card_content{
+    width: 100%;
+    height: 100%;
+}
+
+.card_header{
+    position: relative;
+    padding: 30px 30px 40px 10px;
+    height: 5vh;
+}
+
+h3{
+    font-size: large !important;
+    font-weight: 700 !important;
+}
+
+.card_header::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+    background-image: linear-gradient(to bottom left, var(--fondo), var(--morado));
+}
+
+.card_body{
+    margin: 2vh 4vh !important;
+    text-align: justify;
+}
+
+#recursos a{
+    color: var(--texto);
+    display: block;
+    background-color: var(--morado);
+    border-radius: .75rem;
+    margin: 2% auto;
+    padding: 1%;
+    width: 60%;
+    font-size: medium;
+    transition: all 320ms ease-in;
+}
+
+#recursos a:hover{
+    color: var(--fondo);
+    text-decoration: none;
+    box-shadow: 0px 0px 10px var(--fondo) inset;
+}
+
+#recursos i{
+    margin: 0 2% 0 5%;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5%;
+    background-color: var(--morado);
+    margin-top: 10%;
+    font-size: 20px;
+}
